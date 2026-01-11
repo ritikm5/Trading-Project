@@ -1,0 +1,135 @@
+/* ===================================
+   Pure black background, all white text
+   Minimal design - no borders, no shadows
+   =================================== */
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;  /* Classic terminal feel */
+  background-color: #000000;                       /* Solid pure black */
+  color: #ffffff;                                  /* All normal text = white */
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Center the login and chat containers */
+#login, #chat {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;                                  /* Center horizontally */
+}
+
+/* Login screen inputs (Name and Password) */
+#login input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: #000;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Placeholder text in inputs */
+input::placeholder {
+  color: #aaaaaa;                                  /* Light gray for visibility */
+}
+
+/* Login button */
+#login button {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#login button:hover {
+  color: #cccccc;                                  /* Slightly dim on hover */
+}
+
+/* Error message under login */
+#error {
+  color: #ff8888;                                  /* Soft red for errors */
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Chat message area */
+#messages {
+  height: 70vh;                                    /* Takes most of the screen */
+  overflow-y: auto;                                /* Scroll when full */
+  padding: 10px 0;
+  background: #000;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
+  border: none;
+}
+
+/* Individual message lines: Username >> message */
+#messages > div {
+  margin: 5px 0;
+  word-wrap: break-word;
+}
+
+/* System messages: "X has joined the chat" or "X has left the chat" */
+#messages > div.system {
+  color: #888888;                                  /* Dim gray */
+  font-style: italic;
+  text-align: center;
+  font-size: 0.9em;
+  margin: 15px 0;
+}
+
+/* Input area in chat: message box + Send button side by side */
+#input-area {
+  display: flex;
+  gap: 10px;                                       /* Space between input and button */
+  margin-top: 10px;
+}
+
+/* Message typing box */
+#input-area input#message {
+  flex: 1;                                         /* Takes all available space */
+  padding: 10px;
+  background: #000;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Send button - on the right */
+#input-area button {
+  padding: 10px 20px;
+  background: #000;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+#input-area button:hover {
+  color: #cccccc;
+}
+
+/* Attach button - same style as Send */
+#input-area button.attach {
+  padding: 10px 20px;
+  background: #000;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+#input-area button.attach:hover {
+  color: #cccccc;
+}
